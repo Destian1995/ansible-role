@@ -9,5 +9,5 @@
     name: vector-role
   - src: https://github.com/Destian1995/lighthouse-role.git
     scm: git
-    version: lighthouse-role
+    version: "1.0.2"
     name: lighthouse-role
