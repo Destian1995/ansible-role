@@ -3,11 +3,11 @@
     scm: git
     version: "1.11.1"
     name: clickhouse 
-  - src: https://github.com/Kraktorist/devops-netology
+  - src: https://github.com/Destian1995/vector-role.git
     scm: git
     version: vector-role
     name: vector-role
-  - src: https://github.com/Kraktorist/devops-netology
+  - src: https://github.com/Destian1995/lighthouse-role.git
     scm: git
     version: lighthouse-role
     name: lighthouse-role
