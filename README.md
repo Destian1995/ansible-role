@@ -7,5 +7,4 @@
 * lighthouse-01
 
 
-развернутых с помощью terraform
-terraform манифест создаст файл инвентаризации для ansible.
+развернутых с помощью terraform, terraform манифест создаст файл инвентаризации для ansible.
