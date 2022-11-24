@@ -1,7 +1,0 @@
-endpoint http{{ groups.clickhouse[0] }}8123
-allowed_networks 
-  - 0.0.0.00
-database log
-table entries
-username vector
-password destian
