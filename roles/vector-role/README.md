@@ -1,43 +1,40 @@
-Role Name
+Ansible-Role Vector for CentOS 7
 =========
 
-Роль для установки vector.
-- Установка vector
-- Создание systemd unit Vector
-- Конфигурирование vector на передачу данных в clickhouse
+Role installs Vector on CentOS 7. 
 
 Requirements
 ------------
 
+None.
+
 Role Variables
 --------------
 
-Переменные для установки кредов
-default/main.yml:
-```yaml
-clickhouse_user: netology
-clickhouse_password: netology
+Available variables are listed below, along with default values (see defaults/main.yml):
+
+* The version vector to install.
+```yml
+  vector_version: 0.21.1
 ```
-
-Конфигурация для сбора и передачи логов содержится в vars/main.yml
-
+* Change server name clickhouse ['clickhouse-01']
+```yml
+  vector_conf_endpoint: http://{{ hostvars['clickhouse-01'].ansible_default_ipv4.address }}:8123
+```
 Dependencies
 ------------
 
-В `inventory` должен быть хост `clickhouse-01`
-```yaml
-endpoint: http://{{ hostvars['clickhouse-01'].ansible_host }}:8123
-```
-
-Требуется роль [clickhouse-role](https://github.com/danilabar/clickhouse-role)
+None.
 
 Example Playbook
 ----------------
 
+The simpliest example:
 ```yaml
-hosts: vector
-roles:
-  - role: vector-role
+- name: Install Vector
+  hosts: vector
+  roles:
+    - vector
 ```
 
 License
@@ -47,3 +44,6 @@ MIT
 
 Author Information
 ------------------
+
+HW_netolgy
+
